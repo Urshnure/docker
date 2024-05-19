@@ -1,0 +1,25 @@
+C:\Users\urshnure\Downloads>docker build -t netology-ml:netology-ml .
+[+] Building 2.2s (12/12) FINISHED                                                                       docker:default
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 273B                                                                               0.1s
+ => [internal] load metadata for docker.io/continuumio/miniconda3:latest                                           1.6s
+ => [auth] continuumio/miniconda3:pull token for registry-1.docker.io                                              0.0s
+ => [internal] load .dockerignore                                                                                  0.2s
+ => => transferring context: 2B                                                                                    0.1s
+ => [1/6] FROM docker.io/continuumio/miniconda3:latest@sha256:2016f249cdae34692a20d90fdb17432d07cf312992345d0e1e4  0.0s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 25B                                                                                   0.1s
+ => CACHED [2/6] RUN mkdir /home/app                                                                               0.0s
+ => CACHED [3/6] RUN apt-get update                                                                                0.0s
+ => CACHED [4/6] RUN apt-get install -y python                                                                     0.0s
+ => CACHED [5/6] RUN pip install mlflow     boto3     pymysql                                                      0.0s
+ => CACHED [6/6] COPY 1.sh /home/app/1.sh                                                                          0.0s
+ => exporting to image                                                                                             0.0s
+ => => exporting layers                                                                                            0.0s
+ => => writing image sha256:9ba1f65454b5de6126b43124dab9cb133d05bc9da3a2e8c33e3984aef97b369d                       0.0s
+ => => naming to docker.io/library/netology-ml:netology-ml                                                         0.0s
+
+View build details: docker-desktop://dashboard/build/default/default/d3alcw57dazc80hd72sk0d908
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
